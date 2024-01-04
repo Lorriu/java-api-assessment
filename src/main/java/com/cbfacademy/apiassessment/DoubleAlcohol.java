@@ -1,6 +1,6 @@
 package com.cbfacademy.apiassessment;
 
-public class ChangeStrength {
+public class DoubleAlcohol {
 
     int alcohol;
 

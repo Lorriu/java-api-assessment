@@ -139,7 +139,20 @@
         "fresh_fruit": true,
         "alcohol_strength": "Medium",
         "details": "Shake with ice, strain into a rocks glass over ice, and garnish with a cherry and an orange slice."
-      }
+      }, 
+      {
+      "name": "Aperol Spritz",
+      "ingredients": [
+        "2 oz Aperol",
+        "3 oz Prosecco",
+        "1 oz Soda Water",
+        "Orange Slice (for garnish)"
+      ],
+      "fresh_fruit": true,
+      "alcohol_strength": "Low",
+      "details": "Build over ice in a wine glass, stir gently, and garnish with an orange slice."
+    }
+    
     ]
   }
   

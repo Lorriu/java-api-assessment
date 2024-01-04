@@ -1,4 +1,4 @@
-package com;
+package com.cbfacademy.apiassessment;
 
 import java.util.ArrayList;
 import java.util.List;
