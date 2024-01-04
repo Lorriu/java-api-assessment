@@ -1,0 +1,145 @@
+{
+    "cocktails": [
+      {
+        "name": "Margarita",
+        "ingredients": [
+          "2 oz Tequila",
+          "1 oz Fresh Lime Juice",
+          "0.75 oz Triple Sec"
+        ],
+        "fresh_fruit": true,
+        "alcohol_strength": "Medium",
+        "details": "Serve on the rocks with a salted rim."
+      },
+      {
+        "name": "Martini",
+        "ingredients": [
+          "2.5 oz Gin or Vodka",
+          "0.5 oz Dry Vermouth"
+        ],
+        "fresh_fruit": false,
+        "alcohol_strength": "High",
+        "details": "Stirred or shaken and served in a chilled glass."
+      },
+      {
+        "name": "Mojito",
+        "ingredients": [
+          "2 oz White Rum",
+          "0.75 oz Fresh Lime Juice",
+          "1 tsp Sugar",
+          "Mint Leaves",
+          "Club Soda"
+        ],
+        "fresh_fruit": true,
+        "alcohol_strength": "Medium",
+        "details": "Muddle mint and sugar, add rum, lime juice, ice, and top with club soda."
+      },
+      {
+        "name": "Lychee Martini",
+        "ingredients": [
+          "2 oz Vodka",
+          "1 oz Lychee Liqueur",
+          "0.5 oz Fresh Lime Juice",
+          "1 tsp Simple Syrup",
+          "Lychee Fruit (for garnish)"
+        ],
+        "fresh_fruit": true,
+        "alcohol_strength": "Medium",
+        "details": "Shake with ice and strain into a chilled martini glass. Garnish with a lychee fruit."
+      },
+      {
+        "name": "Pornstar Martini",
+        "ingredients": [
+          "1.5 oz Vanilla Vodka",
+          "0.5 oz Passion Fruit Liqueur",
+          "1 oz Passion Fruit Puree",
+          "0.5 oz Lime Juice",
+          "0.5 oz Simple Syrup",
+          "Champagne (on the side)"
+        ],
+        "fresh_fruit": true,
+        "alcohol_strength": "Medium",
+        "details": "Shake all ingredients (except Champagne) with ice. Strain into a glass and serve with a shot of Champagne on the side."
+      },
+      {
+        "name": "Old Fashioned",
+        "ingredients": [
+          "2 oz Bourbon or Rye Whiskey",
+          "2 dashes Angostura Bitters",
+          "1 Sugar Cube",
+          "Splash of Water"
+        ],
+        "fresh_fruit": false,
+        "alcohol_strength": "High",
+        "details": "Muddle sugar and bitters, add whiskey and ice, stir, and garnish with an orange twist."
+      },
+      {
+        "name": "Daiquiri",
+        "ingredients": [
+          "2 oz White Rum",
+          "1 oz Fresh Lime Juice",
+          "0.5 oz Simple Syrup"
+        ],
+        "fresh_fruit": true,
+        "alcohol_strength": "Medium",
+        "details": "Shake with ice and strain into a chilled glass."
+      },
+      {
+        "name": "Negroni",
+        "ingredients": [
+          "1 oz Gin",
+          "1 oz Campari",
+          "1 oz Sweet Vermouth"
+        ],
+        "fresh_fruit": false,
+        "alcohol_strength": "Medium",
+        "details": "Stir with ice and strain into a rocks glass over ice, garnish with an orange twist."
+      },
+      {
+        "name": "Piña Colada",
+        "ingredients": [
+          "2 oz White Rum",
+          "2 oz Pineapple Juice",
+          "1 oz Coconut Cream",
+          "Pineapple Slice (for garnish)"
+        ],
+        "fresh_fruit": true,
+        "alcohol_strength": "Medium",
+        "details": "Blend with crushed ice until smooth, serve in a chilled glass, and garnish with a pineapple slice."
+      },
+      {
+        "name": "Moscow Mule",
+        "ingredients": [
+          "2 oz Vodka",
+          "0.5 oz Fresh Lime Juice",
+          "4 oz Ginger Beer"
+        ],
+        "fresh_fruit": true,
+        "alcohol_strength": "Medium",
+        "details": "Build over ice in a copper mug, stir gently, and garnish with a lime wedge."
+      },
+      {
+        "name": "Manhattan",
+        "ingredients": [
+          "2 oz Rye Whiskey",
+          "1 oz Sweet Vermouth",
+          "2 dashes Angostura Bitters"
+        ],
+        "fresh_fruit": false,
+        "alcohol_strength": "High",
+        "details": "Stir with ice, strain into a chilled cocktail glass, and garnish with a cherry."
+      },
+      {
+        "name": "Whiskey Sour",
+        "ingredients": [
+          "2 oz Bourbon or Rye Whiskey",
+          "0.75 oz Fresh Lemon Juice",
+          "0.5 oz Simple Syrup"
+        ],
+        "fresh_fruit": true,
+        "alcohol_strength": "Medium",
+        "details": "Shake with ice, strain into a rocks glass over ice, and garnish with a cherry and an orange slice."
+      }
+    ]
+  }
+  
