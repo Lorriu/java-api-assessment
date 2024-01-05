@@ -1,23 +1,40 @@
 package com.cbfacademy.apiassessment;
 
-public class CocktailOrder {
+import java.util.Scanner;
 
-  String alcohol;
+public class CocktailOrder extends Cocktail {
 
-  public CocktailOrder(String name, String alcohol){
+  String userCocktailName;
 
-    //alocate alcohol content
+
+  public CocktailOrder(String userCocktailName, String alcohol){
+
+
+     // Prompt user for input on cocktail name & alcohol amount 
+      Scanner scanner = new Scanner(System.in);
+
+      System.out.print("Enter the name of the cocktail you want to order: ");
+      String userCocktailName = scanner.nextLine();
+
+
 
     //choose cocktail name
-
-    //calculate price of cocktail
-    calculatePrice();
+    this.userCocktailName = userCocktailName;
 
 
+    //Print out order name and price
+    System.out.println("You have ordered a " + userCocktailName + "for $" + calculatePrice() + ". Thank you!");
 
   }
 
+  // Function to get alcohol amount from user input
+      private static String getAlcoholAmount(Scanner scanner) {
+        System.out.print("Select alcohol amount ('None', 'Double', or 'Regular'): ");
+        String alcoholAmount = scanner.nextLine();
 
+       // ADD ERROR HANDLING!! 
+        return alcoholAmount;
+      }
 
 
     //calculate price of cocktail based on alcohol content
@@ -26,7 +43,7 @@ public class CocktailOrder {
         double cocktailCost;
 
              //switch statement to decide price
-        switch (alcohol){
+        switch (alcoholAmount){
           //no alcohol/mocktail price  
           case "None": cocktailCost = 10.00;
             break;
@@ -40,5 +57,23 @@ public class CocktailOrder {
         
         return cocktailCost;
          }
+
+
+
+      public String getAlcohol() {
+          return alcohol;
+      }
+  
+      public void setAlcohol(String alcohol) {
+          this.alcohol = alcohol;
+      }
+  
+      public String getName() {
+          return userCocktailName;
+      }
+  
+      public void setName(String userCocktailName) {
+          this.userCocktailName = userCocktailName;
+      }
     
 }

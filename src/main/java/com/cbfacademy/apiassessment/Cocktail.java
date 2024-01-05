@@ -1,6 +1,7 @@
 package com.cbfacademy.apiassessment;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -68,7 +69,9 @@ public class Cocktail {
         public void setDetails(String details) {
             this.details = details;
         }
-    
+
+
+        //toString method to display details on cocktail
         @Override
         public String toString() {
             return "Cocktail{ name: "+ name + 
@@ -77,4 +80,5 @@ public class Cocktail {
                     ", \nalcoholStrength: "+ alcoholStrength + 
                     ", \ndetails: "+ details + '}';
         }
+
 }
