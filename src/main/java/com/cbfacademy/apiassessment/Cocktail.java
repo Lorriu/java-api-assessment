@@ -69,4 +69,12 @@ public class Cocktail {
             this.details = details;
         }
     
+        @Override
+        public String toString() {
+            return "Cocktail{ name: "+ name + 
+                    ", \ningredients: "+ ingredients + 
+                    ", \nfreshFruit: "+ freshFruit + 
+                    ", \nalcoholStrength: "+ alcoholStrength + 
+                    ", \ndetails: "+ details + '}';
+        }
 }
