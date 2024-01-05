@@ -2,12 +2,17 @@ package com.cbfacademy.apiassessment;
 
 import java.util.Scanner;
 
-public class CocktailOrder extends Cocktail {
+public class CocktailOrder {
 
-  String userCocktailName;
+  private String userCocktailName;
+  private String alcoholAmount;
+
+  public CocktailOrder(){
 
 
-  public CocktailOrder(String userCocktailName, String alcohol){
+  }
+
+  public void placeOrder(){
 
 
      // Prompt user for input on cocktail name & alcohol amount 
@@ -16,16 +21,17 @@ public class CocktailOrder extends Cocktail {
       System.out.print("Enter the name of the cocktail you want to order: ");
       String userCocktailName = scanner.nextLine();
 
+      alcoholAmount = getAlcoholAmount(scanner);
 
-
-    //choose cocktail name
-    this.userCocktailName = userCocktailName;
+      //add statement so that if the name matches cocktail names on JSON document valid, if not invalid statement.
+      if (userCocktailName == )
 
 
     //Print out order name and price
     System.out.println("You have ordered a " + userCocktailName + "for $" + calculatePrice() + ". Thank you!");
 
   }
+      
 
   // Function to get alcohol amount from user input
       private static String getAlcoholAmount(Scanner scanner) {
@@ -61,11 +67,11 @@ public class CocktailOrder extends Cocktail {
 
 
       public String getAlcohol() {
-          return alcohol;
+          return alcoholAmount;
       }
   
       public void setAlcohol(String alcohol) {
-          this.alcohol = alcohol;
+          this.alcoholAmount = alcohol;
       }
   
       public String getName() {
