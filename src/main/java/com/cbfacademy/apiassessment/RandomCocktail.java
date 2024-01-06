@@ -1,19 +1,23 @@
 package com.cbfacademy.apiassessment;
 
+import java.util.List;
+import java.util.Random;
+
 public class RandomCocktail {
 
 
     //select random cocktail
-    getRandomCocktail(){
+    public static Cocktail selectRandomCocktail(List<Cocktail> cocktails) {
 
+        Random rand = new Random();
 
+        int randomIndex = rand.nextInt(cocktails.size());
+
+        return cocktails.get(randomIndex);
     }
 
-    //select random cockatil based on alcohol parameter
-
     //select random alcohol based on strength parameter
-
-    //select random alcohol based on fresh fruit parameter
+    
 
 
     
