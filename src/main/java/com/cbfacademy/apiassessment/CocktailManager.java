@@ -2,6 +2,8 @@ package com.cbfacademy.apiassessment;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -10,7 +12,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 //create a class that performs CRUD operations 
 
-public class CocktailManager {
+public class CocktailManager extends Cocktail{
 
     //path to JSON file
     private final String jsonFilePath = "cocktailsList.json";
@@ -83,10 +85,27 @@ public class CocktailManager {
     // Read 
     public Cocktail getCocktailByName(String name) {
         // Retrieve cocktail details based on the name
+            List<Cocktail> cocktails = getAllCocktails();
+            for (Cocktail cocktail : cocktails) {
+                if (cocktail.getName().equalsIgnoreCase(name)) {
+                    return cocktail;
+                }
+            }
+            return null;
+            
+    }
 
+    private List<Cocktail> getAllCocktails() {
 
-        // Return the Cocktail object
-        return
+        List<Cocktail> cocktailsList = new ArrayList<>();
+        JsonNode cocktails = root.get("cocktailsList");
+
+        for (JsonNode cocktail : cocktails) {
+
+            String name = cocktail.get("name").asText();
+
+        }
+        return cocktailsList;
     }
 
     // Update
@@ -103,5 +122,37 @@ public class CocktailManager {
 
     }
 
+     //get all cocktail names in the JSON file  
+     public List<String> getAllCocktailsName() {
+
+        //create a new Array list called cocktailsNameList
+        List<String> cocktailsNamesList = new ArrayList<>();
+        //Get the root node "cocktailsList"
+        JsonNode cocktailsListRoot = root.get("cocktailsList"); 
+
+
+        try {
+            if (cocktailsListRoot != null && cocktailsListRoot.isArray()) {
+
+                // Iterate through each node in the 'cocktailsList' array and get the names
+                for (JsonNode cocktail : cocktailsListRoot) {
+                
+                    String name = cocktail.get("name: ").asText();
+
+                    // Add the name to the list
+                    cocktailsNamesList.add(name); 
+                }
+            } else { 
+                throw new IOException("'cocktailsList' not found or is not an array");
+            }
+            } catch (IOException e) {
+        
+                System.err.println("Error accessing 'cocktailsList': " + e.getMessage());
+            
+            }
+
+            return cocktailsNamesList;
+    }
+    
     
 }
