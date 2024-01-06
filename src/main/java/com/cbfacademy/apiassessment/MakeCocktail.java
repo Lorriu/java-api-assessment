@@ -2,20 +2,28 @@ package com.cbfacademy.apiassessment;
 
 
 //make methods
-public class MakeCocktail {
+public abstract class MakeCocktail {
 
 
     //get details on how to make cocktail
-    getDetails()
+    void getDetails(){
+
+    }
 
     //shake if needed
-    shake()
+    void shake(){
+
+    }
 
     //stir if needed
-    stir()
+    void stir(){
+
+    }
 
     //pour if needed
-    pour()
+    void pour(){
+
+    }
 
     
     

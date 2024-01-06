@@ -1,6 +1,6 @@
 package com.cbfacademy.apiassessment;
 
-public class DoubleAlcohol {
+public class DoubleAlcohol extends MakeCocktail{
 
     int alcohol;
 

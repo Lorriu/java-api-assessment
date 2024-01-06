@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 //create a class that performs CRUD operations 
 
-public class CocktailManager extends Cocktail{
+public class CocktailManager{
 
     //path to JSON file
     private final String jsonFilePath = "cocktailsList.json";
@@ -92,7 +92,7 @@ public class CocktailManager extends Cocktail{
                 }
             }
             return null;
-            
+
     }
 
     private List<Cocktail> getAllCocktails() {
@@ -100,10 +100,12 @@ public class CocktailManager extends Cocktail{
         List<Cocktail> cocktailsList = new ArrayList<>();
         JsonNode cocktails = root.get("cocktailsList");
 
-        for (JsonNode cocktail : cocktails) {
+        if (cocktails != null && cocktails.isArray()) {
+            for (JsonNode cocktail : cocktails) {
 
-            String name = cocktail.get("name").asText();
+                String name = cocktail.get("name").asText();
 
+            }
         }
         return cocktailsList;
     }

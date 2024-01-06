@@ -61,6 +61,8 @@ public class CocktailOrder {
 
   }
 
+  
+
   // Function to get alcohol amount from user input
     private static String getAlcoholAmount(Scanner scanner) {
         System.out.print("Select alcohol amount ('None', 'Double', or 'Regular'): ");
