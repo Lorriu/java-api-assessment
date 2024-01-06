@@ -26,6 +26,8 @@ public class CocktailOrder {
       //add statement so that if the name matches cocktail names on JSON document valid, if not invalid statement.
       if (userCocktailName == )
 
+      //option to select random cocktail to order(using RandomCoctail class)
+
 
     //Print out order name and price
     System.out.println("You have ordered a " + userCocktailName + "for $" + calculatePrice() + ". Thank you!");
