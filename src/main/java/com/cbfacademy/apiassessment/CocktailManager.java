@@ -91,7 +91,7 @@ public abstract class CocktailManager{
                     return cocktail;
                 }
             }
-            return null;
+            return cocktails;
 
     }
 
