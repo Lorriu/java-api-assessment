@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
-public class CocktailOrder {
+public class CocktailOrder extends CocktailManager {
 
   private String userCocktailName;
   private String alcoholAmount;
@@ -27,7 +27,7 @@ public class CocktailOrder {
     List<String> availableCocktails = null;
 
       try {
-
+          //ERROR TRYING TO FIGURE OUT HOW TO CONNECT THIS NAME FUNCTION OR THE getAllCocktails();
           availableCocktails = getAllCocktailsName();
 
       } catch (IOException e) {

@@ -19,6 +19,12 @@ public class Cocktail {
             this.ingredients = new ArrayList<>();
          }
 
+    //Constructot with name
+        public Cocktail(String name) {
+            this.name = name;
+         }
+  
+
     //constructor with parameters
         public Cocktail(String name, List<String> ingredients, boolean freshFruit, String alcoholStrength, String details) {
             this.name = name;

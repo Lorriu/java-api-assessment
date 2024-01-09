@@ -7,7 +7,7 @@ import java.util.List;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class CocktailNames {
+public class abstract CocktailNames {
 
 
     //path to JSON file
