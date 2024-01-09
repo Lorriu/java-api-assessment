@@ -7,7 +7,7 @@ import java.util.List;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class abstract CocktailNames {
+public abstract class CocktailNames {
 
 
     //path to JSON file
@@ -21,6 +21,8 @@ public class abstract CocktailNames {
 
 
     }
+
+    
 
 
     //get all cocktail names in the JSON file  
