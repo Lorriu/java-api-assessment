@@ -1,5 +1,8 @@
 # **Java API Assessment**
 
+**PLEASE NOTE MY API PROJECT IS LOCATED IN THE "cocktailapi" REPOSITORY**
+[cocktailapi](https://github.com/Lorriu/java-api-assessment/tree/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi)
+
 ## **Introduction**
 Dive into the world of API development using Java and SpringBoot. We're handing over a skeleton codebase; your challenge is to shape a top-notch API from it.
 
