@@ -1,12 +1,13 @@
-package com.cbfacademy.apiassessment;
+package com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.UUID;
 
 
 public class Cocktail {
 
+    private UUID id;
     private String name;
     private List<String> ingredients;
     private boolean freshFruit;
@@ -27,6 +28,9 @@ public class Cocktail {
 
     //constructor with parameters
         public Cocktail(String name, List<String> ingredients, boolean freshFruit, String alcoholStrength, String details) {
+
+            //generate random UUID
+            this.id = UUID.randomUUID();
             this.name = name;
             this.ingredients = ingredients;
             this.freshFruit = freshFruit;
@@ -35,6 +39,11 @@ public class Cocktail {
         }
 
     // Getter methods
+        public UUID getId(){
+
+            return id;
+        }
+        
         public String getName() {
             return name;
         }
@@ -56,6 +65,11 @@ public class Cocktail {
         }
 
     // Setter methods
+
+        public void setId(UUID id) {
+            this.id = id;
+        }
+
          public void setName(String name) {
             this.name = name;
         }

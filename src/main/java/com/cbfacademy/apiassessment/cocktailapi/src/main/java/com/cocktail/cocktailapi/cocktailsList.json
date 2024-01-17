@@ -1,6 +1,7 @@
 {
     "cocktails": [
       {
+        "id": "",
         "name": "Margarita",
         "ingredients": [
           "2 oz Tequila",
@@ -12,6 +13,7 @@
         "details": "Serve on the rocks with a salted rim."
       },
       {
+        "id": "",
         "name": "Martini",
         "ingredients": [
           "2.5 oz Gin or Vodka",
@@ -22,6 +24,7 @@
         "details": "Stirred or shaken and served in a chilled glass."
       },
       {
+        "id": "",
         "name": "Mojito",
         "ingredients": [
           "2 oz White Rum",
@@ -35,6 +38,7 @@
         "details": "Muddle mint and sugar, add rum, lime juice, ice, and top with club soda."
       },
       {
+        "id": "",
         "name": "Lychee Martini",
         "ingredients": [
           "2 oz Vodka",
@@ -48,6 +52,7 @@
         "details": "Shake with ice and strain into a chilled martini glass. Garnish with a lychee fruit."
       },
       {
+        "id": "",
         "name": "Pornstar Martini",
         "ingredients": [
           "1.5 oz Vanilla Vodka",
@@ -62,6 +67,7 @@
         "details": "Shake all ingredients (except Champagne) with ice. Strain into a glass and serve with a shot of Champagne on the side."
       },
       {
+        "id": "",
         "name": "Old Fashioned",
         "ingredients": [
           "2 oz Bourbon or Rye Whiskey",
@@ -74,6 +80,7 @@
         "details": "Muddle sugar and bitters, add whiskey and ice, stir, and garnish with an orange twist."
       },
       {
+        "id": "",
         "name": "Daiquiri",
         "ingredients": [
           "2 oz White Rum",
@@ -85,6 +92,7 @@
         "details": "Shake with ice and strain into a chilled glass."
       },
       {
+        "id": "",
         "name": "Negroni",
         "ingredients": [
           "1 oz Gin",
@@ -96,6 +104,7 @@
         "details": "Stir with ice and strain into a rocks glass over ice, garnish with an orange twist."
       },
       {
+        "id": "",
         "name": "Piña Colada",
         "ingredients": [
           "2 oz White Rum",
@@ -108,6 +117,7 @@
         "details": "Blend with crushed ice until smooth, serve in a chilled glass, and garnish with a pineapple slice."
       },
       {
+        "id": "",
         "name": "Moscow Mule",
         "ingredients": [
           "2 oz Vodka",
@@ -119,6 +129,7 @@
         "details": "Build over ice in a copper mug, stir gently, and garnish with a lime wedge."
       },
       {
+        "id": "",
         "name": "Manhattan",
         "ingredients": [
           "2 oz Rye Whiskey",
@@ -130,6 +141,7 @@
         "details": "Stir with ice, strain into a chilled cocktail glass, and garnish with a cherry."
       },
       {
+        "id": "",
         "name": "Whiskey Sour",
         "ingredients": [
           "2 oz Bourbon or Rye Whiskey",
@@ -141,17 +153,18 @@
         "details": "Shake with ice, strain into a rocks glass over ice, and garnish with a cherry and an orange slice."
       }, 
       {
-      "name": "Aperol Spritz",
-      "ingredients": [
-        "2 oz Aperol",
-        "3 oz Prosecco",
-        "1 oz Soda Water",
-        "Orange Slice (for garnish)"
-      ],
-      "fresh_fruit": true,
-      "alcohol_strength": "Low",
-      "details": "Build over ice in a wine glass, stir gently, and garnish with an orange slice."
-    }
+        "id": "",
+        "name": "Aperol Spritz",
+        "ingredients": [
+          "2 oz Aperol",
+          "3 oz Prosecco",
+          "1 oz Soda Water",
+          "Orange Slice (for garnish)"
+        ],
+        "fresh_fruit": true,
+        "alcohol_strength": "Low",
+        "details": "Build over ice in a wine glass, stir gently, and garnish with an orange slice."
+      }
     
     ]
   }
