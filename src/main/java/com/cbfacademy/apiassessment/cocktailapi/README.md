@@ -16,8 +16,15 @@ I was tasked with creating an API that includes
 
 I will decribe how each item was included in the project below:
 
+## Store the data in a JSON file 
 
-## If you would like to collaborate on this project here are the steps yp get started:
+The data is store in a JSON file named cocktailsList.json
+[cocktailslist](https://github.com/Lorriu/java-api-assessment/blob/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi/src/main/java/com/cocktail/cocktailapi/cocktailsList.json)
+
+
+
+
+## If you would like to collaborate on this project here are the steps to get started:
 
 ### Setup
 
