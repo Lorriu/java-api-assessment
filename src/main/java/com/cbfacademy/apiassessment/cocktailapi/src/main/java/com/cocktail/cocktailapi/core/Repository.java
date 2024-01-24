@@ -26,7 +26,7 @@ public interface Repository<T, ID extends Serializable> {
      * @param entity the {@code <T>} to create
      * @return the created entity
      */
-    T create(T entity) throws IllegalArgumentException, PersistenceException;
+    T create(T entity);
 
     /**
      * Deletes an entity from the repository based on its unique identifier.
