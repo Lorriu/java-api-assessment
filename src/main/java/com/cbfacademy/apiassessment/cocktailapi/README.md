@@ -18,7 +18,7 @@ I will decribe how each item was included in the project below:
 
 ## Store the data in a JSON file 
 
-The data is store in a JSON file named [cocktailslist](https://github.com/Lorriu/java-api-assessment/blob/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi/src/main/java/com/cocktail/cocktailapi/cocktailsList.json).json
+The data is stored in a JSON file named [cocktailslist](https://github.com/Lorriu/java-api-assessment/blob/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi/src/main/java/com/cocktail/cocktailapi/cocktailsList.json)
 
 
 

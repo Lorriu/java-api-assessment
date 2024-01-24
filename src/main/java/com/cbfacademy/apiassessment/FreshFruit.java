@@ -3,6 +3,8 @@ package com.cbfacademy.apiassessment;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi.Cocktail;
+
 public class FreshFruit {
 
     //ALGORITHIM
