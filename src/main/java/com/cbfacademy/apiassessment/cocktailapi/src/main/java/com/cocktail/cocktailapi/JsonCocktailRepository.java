@@ -182,4 +182,19 @@ public class JsonCocktailRepository implements CocktailRepository {
                 .filter(cocktail -> cocktail.getAlcoholStrength().equals(strength))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    //Select a random cocktail from the provided list
+    public Cocktail selectRandomCocktail(List<Cocktail> cocktails) {
+
+            //Create a new Random object to generate random numbers
+            Random rand = new Random();
+
+            //Generate a random index within the range of the list size
+            int randomIndex = rand.nextInt(cocktails.size());
+
+            //Retrieve the cocktail at the randomly generated index from the list
+            return cocktails.get(randomIndex);
+        }
+
 }

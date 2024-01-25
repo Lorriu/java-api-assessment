@@ -26,6 +26,15 @@ public interface CocktailRepository extends Repository<Cocktail, UUID> {
     List<Cocktail> searchByAlcoholStrength(String name);
 
 
+      /**
+     * Searches for random Cocktail
+     *
+     * @param cocktails t
+     * @return a random cocktail
+     */
+    Cocktail selectRandomCocktail(List<Cocktail> cocktails);
+
+
     
 
 }
