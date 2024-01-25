@@ -20,10 +20,10 @@ public interface CocktailRepository extends Repository<Cocktail, UUID> {
       /**
      * Searches for Cocktails where the Cocktail strength matches the provided string.
      *
-     * @param name the name of the strength
+     * @param strength the name of the strength
      * @return a list of cocktails that match the strength name
      */
-    List<Cocktail> searchByAlcoholStrength(String name);
+    List<Cocktail> searchByAlcoholStrength(String strength);
 
 
       /**

@@ -17,11 +17,14 @@ public class Cocktail {
 
      // Constructor to initialize the list
         public Cocktail() {
+            this.id = UUID.randomUUID();
             this.ingredients = new ArrayList<>();
          }
 
     //Constructot with name
         public Cocktail(String name) {
+
+            this(); // Invoke the default constructor
             this.name = name;
          }
   
