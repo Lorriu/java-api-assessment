@@ -45,14 +45,22 @@ public class CocktailController {
     @GetMapping
     public ResponseEntity<List<Cocktail>> getAllCocktails() {
 
-        List<Cocktail> cocktails = CocktailService.getAllCocktails();
-        return ResponseEntity.ok().body(cocktails);
+        try {
+
+            List<Cocktail> cocktails = cocktailService.getAllCocktails();
+            return ResponseEntity.ok().body(cocktails);
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     // Handling HTTP GET request to retrieve a specific Cocktail by its ID
     @GetMapping("/{id}")
     // Extracting the ID from the URI path and passing it as a method parameter
-    public ResponseEntity<Cocktail> getCocktail(@PathVariable("id") UUID id) {
+    public ResponseEntity<?> getCocktail(@PathVariable("id") UUID id) {
         
         try {
 
@@ -61,10 +69,11 @@ public class CocktailController {
 
         } catch (CocktailNotFoundException e) {
 
-            //return ResponseEntity.notFound().build();
-            e.getMessage();
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-            
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiErrorResponse("Cocktail not found"));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
        
     }
@@ -72,7 +81,7 @@ public class CocktailController {
     // Handling HTTP POST request to add a new Cocktail
     @PostMapping
     // Deserializing the request body (JSON) into an Cocktail object
-    public ResponseEntity<Cocktail> createIOU(@RequestBody Cocktail cocktail) {
+    public ResponseEntity<Cocktail> createCocktail(@RequestBody Cocktail cocktail) {
        
         try {
 
@@ -87,13 +96,17 @@ public class CocktailController {
 
             e.getMessage();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 
     // Handling HTTP PUT request to update an existing Cocktail by its ID
     @PutMapping("/{id}")
     // Extracting the ID from the URI path and updating the corresponding Cocktail
-    public ResponseEntity<Cocktail> updateCocktail(@PathVariable UUID id, @RequestBody Cocktail updatedCocktail) {
+    public ResponseEntity<?> updateCocktail(@PathVariable UUID id, @RequestBody Cocktail updatedCocktail) {
         
             try {
                 
@@ -103,12 +116,16 @@ public class CocktailController {
 
             } catch (CocktailNotFoundException e) {
 
-                //return ResponseEntity.notFound().build();
+                e.printStackTrace();
                 e.getMessage();
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiErrorResponse("Cocktail not found"));
+            } catch (Exception e) {
+
+                e.printStackTrace();
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
             }
-               
     }
+               
 
     // Handling HTTP DELETE request to delete a Cocktail by its ID
     @DeleteMapping("/{id}")
@@ -121,13 +138,16 @@ public class CocktailController {
         return ResponseEntity.noContent().build();
 
     } catch (CocktailNotFoundException e) {
-        
+
+        e.printStackTrace();
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiErrorResponse("Cocktail not found"));
+    } catch (Exception e) {
+
+        e.printStackTrace();
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     }
 }
 
 
 
-
-    
 }

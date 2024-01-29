@@ -29,10 +29,23 @@ public class JsonCocktailRepository implements CocktailRepository {
 
     //Constructor to initialize the repository with file path and load data from JSON
     public JsonCocktailRepository(@Value("${cocktailsList.json}") String filePath) {
+
+        validateFilePath(filePath); // Validate the file path
         this.filePath = filePath;
         objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
         cocktails = loadDataFromJson();
+    }
+
+    //Validate the file path
+    private void validateFilePath(String filePath) {
+
+        File file = new File(filePath);
+
+        if (!file.exists() || !file.isFile()) {
+            
+            throw new IllegalArgumentException("Invalid file path: " + filePath);
+        }
     }
 
     //Load cocktail data from JSON file into the in-memory list
