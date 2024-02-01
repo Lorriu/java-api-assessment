@@ -1,4 +1,4 @@
-package com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi;
+package com.cbfacademy.apiassessment.cocktailapi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi.core.PersistenceException;
+import com.cbfacademy.apiassessment.cocktailapi.core.PersistenceException;
 
 
 

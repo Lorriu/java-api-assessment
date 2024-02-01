@@ -1,4 +1,4 @@
-package com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi;
+package com.cbfacademy.apiassessment.cocktailapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

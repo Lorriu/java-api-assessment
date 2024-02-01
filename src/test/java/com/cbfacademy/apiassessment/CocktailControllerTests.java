@@ -1,18 +1,15 @@
-package com.cbfacademy.apiassessment.cocktailapi.src.test.java.com.cocktail.cocktailapi;
+package com.cbfacademy.apiassessment;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.boot.test.web.server.LocalServerPort;
 
-import com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi.Cocktail;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class CocktailControllerTests {
@@ -63,4 +60,8 @@ class CocktailControllerTests {
         // Write a test case to check the response when calling the endpoint to delete a specific cocktail by ID
         // Use the restTemplate to make a DELETE request to "/api/cocktails/{id}" and assert the expected behavior
     }
+
+    // Write a test case to check the response when searching for a cocktail by price
+
+    // Write a test case to check the response when searching cocktail by name
 }

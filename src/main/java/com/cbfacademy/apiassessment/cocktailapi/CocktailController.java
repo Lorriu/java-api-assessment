@@ -1,4 +1,4 @@
-package com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi;
+package com.cbfacademy.apiassessment.cocktailapi;
 
 import java.net.URI;
 import java.util.List;
@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi.core.ApiErrorResponse;
-import com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi.core.CocktailNotFoundException;
+import com.cbfacademy.apiassessment.cocktailapi.core.ApiErrorResponse;
+import com.cbfacademy.apiassessment.cocktailapi.core.CocktailNotFoundException;
 
 //Controller for handling HTTP request
 @RestController

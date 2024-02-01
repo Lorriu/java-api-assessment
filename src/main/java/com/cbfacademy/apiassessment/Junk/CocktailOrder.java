@@ -1,4 +1,4 @@
-package com.cbfacademy.apiassessment;
+package com.cbfacademy.apiassessment.Junk;
 
 import java.io.IOException;
 import java.util.ArrayList;

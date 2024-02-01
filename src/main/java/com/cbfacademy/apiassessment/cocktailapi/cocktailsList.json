@@ -1,7 +1,6 @@
 {
     "cocktails": [
       {
-        "id": "",
         "name": "Margarita",
         "ingredients": [
           "2 oz Tequila",
@@ -10,10 +9,10 @@
         ],
         "fresh_fruit": true,
         "alcohol_strength": "Medium",
-        "details": "Serve on the rocks with a salted rim."
+        "details": "Serve on the rocks with a salted rim.",
+        "price": 14.00
       },
       {
-        "id": "",
         "name": "Martini",
         "ingredients": [
           "2.5 oz Gin or Vodka",
@@ -21,10 +20,10 @@
         ],
         "fresh_fruit": false,
         "alcohol_strength": "High",
-        "details": "Stirred or shaken and served in a chilled glass."
+        "details": "Stirred or shaken and served in a chilled glass.",
+        "price": 15.00
       },
       {
-        "id": "",
         "name": "Mojito",
         "ingredients": [
           "2 oz White Rum",
@@ -35,10 +34,10 @@
         ],
         "fresh_fruit": true,
         "alcohol_strength": "Medium",
-        "details": "Muddle mint and sugar, add rum, lime juice, ice, and top with club soda."
+        "details": "Muddle mint and sugar, add rum, lime juice, ice, and top with club soda.",
+        "price": 14.00
       },
       {
-        "id": "",
         "name": "Lychee Martini",
         "ingredients": [
           "2 oz Vodka",
@@ -49,10 +48,10 @@
         ],
         "fresh_fruit": true,
         "alcohol_strength": "Medium",
-        "details": "Shake with ice and strain into a chilled martini glass. Garnish with a lychee fruit."
+        "details": "Shake with ice and strain into a chilled martini glass. Garnish with a lychee fruit.",
+        "price": 15.00
       },
       {
-        "id": "",
         "name": "Pornstar Martini",
         "ingredients": [
           "1.5 oz Vanilla Vodka",
@@ -64,10 +63,10 @@
         ],
         "fresh_fruit": true,
         "alcohol_strength": "Medium",
-        "details": "Shake all ingredients (except Champagne) with ice. Strain into a glass and serve with a shot of Champagne on the side."
+        "details": "Shake all ingredients (except Champagne) with ice. Strain into a glass and serve with a shot of Champagne on the side.",
+        "price": 15.00
       },
       {
-        "id": "",
         "name": "Old Fashioned",
         "ingredients": [
           "2 oz Bourbon or Rye Whiskey",
@@ -77,10 +76,10 @@
         ],
         "fresh_fruit": false,
         "alcohol_strength": "High",
-        "details": "Muddle sugar and bitters, add whiskey and ice, stir, and garnish with an orange twist."
+        "details": "Muddle sugar and bitters, add whiskey and ice, stir, and garnish with an orange twist.",
+        "price": 15.00
       },
       {
-        "id": "",
         "name": "Daiquiri",
         "ingredients": [
           "2 oz White Rum",
@@ -89,10 +88,10 @@
         ],
         "fresh_fruit": true,
         "alcohol_strength": "Medium",
-        "details": "Shake with ice and strain into a chilled glass."
+        "details": "Shake with ice and strain into a chilled glass.",
+        "price": 13.00
       },
       {
-        "id": "",
         "name": "Negroni",
         "ingredients": [
           "1 oz Gin",
@@ -101,10 +100,10 @@
         ],
         "fresh_fruit": false,
         "alcohol_strength": "Medium",
-        "details": "Stir with ice and strain into a rocks glass over ice, garnish with an orange twist."
+        "details": "Stir with ice and strain into a rocks glass over ice, garnish with an orange twist.",
+        "price": 14.00
       },
       {
-        "id": "",
         "name": "Piña Colada",
         "ingredients": [
           "2 oz White Rum",
@@ -114,10 +113,10 @@
         ],
         "fresh_fruit": true,
         "alcohol_strength": "Medium",
-        "details": "Blend with crushed ice until smooth, serve in a chilled glass, and garnish with a pineapple slice."
+        "details": "Blend with crushed ice until smooth, serve in a chilled glass, and garnish with a pineapple slice.",
+        "price": 14.00
       },
       {
-        "id": "",
         "name": "Moscow Mule",
         "ingredients": [
           "2 oz Vodka",
@@ -126,10 +125,10 @@
         ],
         "fresh_fruit": true,
         "alcohol_strength": "Medium",
-        "details": "Build over ice in a copper mug, stir gently, and garnish with a lime wedge."
+        "details": "Build over ice in a copper mug, stir gently, and garnish with a lime wedge.",
+        "price": 15.00
       },
       {
-        "id": "",
         "name": "Manhattan",
         "ingredients": [
           "2 oz Rye Whiskey",
@@ -138,10 +137,10 @@
         ],
         "fresh_fruit": false,
         "alcohol_strength": "High",
-        "details": "Stir with ice, strain into a chilled cocktail glass, and garnish with a cherry."
+        "details": "Stir with ice, strain into a chilled cocktail glass, and garnish with a cherry.",
+        "price": 15.00
       },
       {
-        "id": "",
         "name": "Whiskey Sour",
         "ingredients": [
           "2 oz Bourbon or Rye Whiskey",
@@ -150,10 +149,10 @@
         ],
         "fresh_fruit": true,
         "alcohol_strength": "Medium",
-        "details": "Shake with ice, strain into a rocks glass over ice, and garnish with a cherry and an orange slice."
+        "details": "Shake with ice, strain into a rocks glass over ice, and garnish with a cherry and an orange slice.",
+        "price": 15.00
       }, 
       {
-        "id": "",
         "name": "Aperol Spritz",
         "ingredients": [
           "2 oz Aperol",
@@ -163,7 +162,8 @@
         ],
         "fresh_fruit": true,
         "alcohol_strength": "Low",
-        "details": "Build over ice in a wine glass, stir gently, and garnish with an orange slice."
+        "details": "Build over ice in a wine glass, stir gently, and garnish with an orange slice.",
+        "price": 12.00
       }
     
     ]

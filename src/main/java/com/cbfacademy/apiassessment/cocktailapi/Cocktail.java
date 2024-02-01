@@ -1,4 +1,4 @@
-package com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi;
+package com.cbfacademy.apiassessment.cocktailapi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +13,7 @@ public class Cocktail {
     private boolean freshFruit;
     private String alcoholStrength;
     private String details;
+    private int price;
 
 
      // Constructor to initialize the list
@@ -30,7 +31,7 @@ public class Cocktail {
   
 
     //constructor with parameters
-        public Cocktail(String name, List<String> ingredients, boolean freshFruit, String alcoholStrength, String details) {
+        public Cocktail(String name, List<String> ingredients, boolean freshFruit, String alcoholStrength, String details, int price) {
 
             //generate random UUID
             this.id = UUID.randomUUID();
@@ -39,6 +40,7 @@ public class Cocktail {
             this.freshFruit = freshFruit;
             this.alcoholStrength = alcoholStrength;
             this.details = details;
+            this.price = price;
         }
 
     // Getter methods
@@ -67,6 +69,10 @@ public class Cocktail {
             return details;
         }
 
+        public Integer getPrice(){
+            return price;
+        }
+
     // Setter methods
 
         public void setId(UUID id) {
@@ -93,6 +99,9 @@ public class Cocktail {
             this.details = details;
         }
 
+        public void setPrice(Integer price) {
+            this.price = price;
+        }
 
         //toString method to display details on cocktail
         @Override
@@ -101,7 +110,8 @@ public class Cocktail {
                     ", \ningredients: "+ ingredients + 
                     ", \nfreshFruit: "+ freshFruit + 
                     ", \nalcoholStrength: "+ alcoholStrength + 
-                    ", \ndetails: "+ details + '}';
+                    ", \ndetails: "+ details +
+                    ", \nprice: "+ price + '}';
         }
 
 }

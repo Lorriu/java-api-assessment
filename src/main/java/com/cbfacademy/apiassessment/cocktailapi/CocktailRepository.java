@@ -1,9 +1,9 @@
-package com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi;
+package com.cbfacademy.apiassessment.cocktailapi;
 
 import java.util.List;
 import java.util.UUID;
 
-import com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi.core.Repository;
+import com.cbfacademy.apiassessment.cocktailapi.core.Repository;
 
 public interface CocktailRepository extends Repository<Cocktail, UUID> {
 
@@ -29,10 +29,18 @@ public interface CocktailRepository extends Repository<Cocktail, UUID> {
       /**
      * Searches for random Cocktail
      *
-     * @param cocktails t
+     * @param cocktails 
      * @return a random cocktail
      */
     Cocktail selectRandomCocktail(List<Cocktail> cocktails);
+
+      /**
+     * Searches for Cocktail by price
+     *
+     * @param price 
+     * @return a list of cocktails that match the price
+     */
+   List<Cocktail> searchByPrice(Integer price);
 
 
     

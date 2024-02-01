@@ -1,6 +1,6 @@
-package com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi;
+package com.cbfacademy.apiassessment.cocktailapi;
 
-import com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi.core.PersistenceException;
+import com.cbfacademy.apiassessment.cocktailapi.core.PersistenceException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -209,5 +209,12 @@ public class JsonCocktailRepository implements CocktailRepository {
             //Retrieve the cocktail at the randomly generated index from the list
             return cocktails.get(randomIndex);
         }
+
+    @Override
+    //ALGORITHM to search for a cocktail by price point
+    public List<Cocktail> searchByPrice(Integer price) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'searchByPrice'");
+    }
 
 }

@@ -1,4 +1,4 @@
-package com.cbfacademy.apiassessment.cocktailapi.src.main.java.com.cocktail.cocktailapi.core;
+package com.cbfacademy.apiassessment.cocktailapi.core;
 
 import java.util.List;
 
