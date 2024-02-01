@@ -40,7 +40,7 @@ public interface CocktailRepository extends Repository<Cocktail, UUID> {
      * @param price 
      * @return a list of cocktails that match the price
      */
-   List<Cocktail> searchByPrice(double price);
+    List<Cocktail> searchByPrice(double price);
 
 
     
