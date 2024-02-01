@@ -16,12 +16,64 @@ I was tasked with creating an API that includes
 
 I will decribe how each item was included in the project below:
 
+## At least one algoritm
+
+I have multiple algorithm's located in my [JsonCocktailReposity](https://github.com/Lorriu/java-api-assessment/blob/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi/JsonCocktailRepository.java). I used linear search to locate the specified name (searchByCocktailName()), alchohol strength (searchByAlcoholStrength()) and price (searchByPrice()), as well as in the update() method and multiple other methods in this class to implement algorithms to locate the desired cocktail.
+
+## Unit test at least one class
+
+My unit testing is located in the [CocktailControllerTests](https://github.com/Lorriu/java-api-assessment/blob/main/src/test/java/com/cbfacademy/apiassessment/CocktailControllerTests.java). In this class I tested:
+
+1. The response when calling the endpoint to get all cocktails
+1. The response when calling the endpoint to get a specific cocktail by ID
+1. The response when searching for a cocktail by price
+1. The response when searching cocktail by name
+
+
 ## Store the data in a JSON file 
 
-The data is stored in a JSON file named [cocktailslist](https://github.com/Lorriu/java-api-assessment/blob/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi/src/main/java/com/cocktail/cocktailapi/cocktailsList.json)
+The data is stored in a JSON file named [cocktailslist](https://github.com/Lorriu/java-api-assessment/blob/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi/cocktailsList.json)
+
+## Exception handling
+
+The [Core](https://github.com/Lorriu/java-api-assessment/tree/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi/core) repository has the exception handling classes that I created, these exceptions where mainly used in my [JsonCocktailRepository](https://github.com/Lorriu/java-api-assessment/blob/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi/JsonCocktailRepository.java) to make sure that the ID or item requested is not null or is a valid entry. 
+
+## Evidence of inheritance
+
+An example of Inheritance being was used within this project is the [CocktailRepository](https://github.com/Lorriu/java-api-assessment/blob/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi/CocktailRepository.java) class extending the repository class. 
+
+## Good use of HTTP Protocols 
+
+In the [CocktailController](https://github.com/Lorriu/java-api-assessment/blob/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi/CocktailController.java) there methods that define endpoints for the following operations are:
+
+| Method   | URL              | Description          |
+| -------- | ---------------- | -------------------- |
+| `GET`    | `/api/cocktails`      | Get all Cocktails         |
+| `GET`    | `/api/cocktails/{id}` | Get a Cocktail by id     |
+| `POST`   | `/api/cocktails`      | Add a Cocktail          |
+| `PUT`    | `/api/cocktails/{id}` | Replace a Cocktail by Id |
+| `DELETE` | `/api/cocktails/{id}` | Delete a Cocktail by id  |
 
 
+The [ListCocktailService](https://github.com/Lorriu/java-api-assessment/blob/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi/ListCocktailService.java) has the full methods to perform CRUD operations. 
 
+
+A representative HTTP response will look something like this:
+```JSON
+{
+    "id": "8fg692-2322-a59e98efg64f",
+    "name": "Margarita",
+        "ingredients": [
+          "2 oz Tequila",
+          "1 oz Fresh Lime Juice",
+          "0.75 oz Triple Sec"
+        ],
+        "fresh_fruit": true,
+        "alcohol_strength": "Medium",
+        "details": "Serve on the rocks with a salted rim.",
+        "price": 14.00
+}
+```
 
 ## If you would like to collaborate on this project here are the steps to get started:
 

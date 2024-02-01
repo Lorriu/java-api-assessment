@@ -1,6 +1,6 @@
-package com.cbfacademy.apiassessment.cocktailapi;
+package cocktailapi.src.main.java.com.cocktail.cocktailapi
 
-import com.cbfacademy.apiassessment.cocktailapi.core.PersistenceException;
+import com.cocktailapi.src.main.java.com.cocktail.cocktailapi.core.PersistenceException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -181,7 +181,7 @@ public class JsonCocktailRepository implements CocktailRepository {
     }
 
     @Override
-    //LinearSearch for cocktails by name in the in-memory list
+    //Search for cocktails by name in the in-memory list
     public List<Cocktail> searchByCocktailName(String name) {
         return cocktails.stream()
                 .filter(cocktail -> cocktail.getName().equals(name))
@@ -189,7 +189,7 @@ public class JsonCocktailRepository implements CocktailRepository {
     }
 
     @Override
-    //LinearSearch for cocktails by alcohol strength in the in-memory list
+    //Search for cocktails by alcohol strength in the in-memory list
     public List<Cocktail> searchByAlcoholStrength(String strength) {
         return cocktails.stream()
                 .filter(cocktail -> cocktail.getAlcoholStrength().equals(strength))
@@ -209,19 +209,5 @@ public class JsonCocktailRepository implements CocktailRepository {
             //Retrieve the cocktail at the randomly generated index from the list
             return cocktails.get(randomIndex);
         }
-
-    @Override
-    //Linear search for a cocktail by price point
-    public List<Cocktail> searchByPrice(double price) {
-
-        //filter cocktails based on the specified price
-        return cocktails.stream()
-            .filter(cocktail -> cocktail.getPrice() == price)
-            //Collect the matching cocktails into a new list
-            .collect(Collectors.toList());
-
-    }
-
-
 
 }
