@@ -1,9 +1,8 @@
 # **Cocktail API**
 
 ## **Introduction**
-The initial repository (cocktailapi) was created using SpringBoot. I then imported it into VS Code to create the API.
 
-I was tasked with creating an API that includes 
+I was tasked with creating an API that includes:
 
 
 1. At least one algorithm
@@ -14,6 +13,8 @@ I was tasked with creating an API that includes
 1. Good use of HTTP Protocols - methods, request and response, have full CRUD operations supported 
 1. Documentation
 
+I decided to create a Cocktail API, that can be used to read, add, update and delete a list of cocktails. There are multiple use cases this API can be used for including a cocktail recipe app/website, a cocktail ordering system, that could be used by resturants or bars, it can be an add on feature to a menu or used for inventory or teaching bartenders. 
+
 I will decribe how each item was included in the project below:
 
 ## At least one algoritm
@@ -22,12 +23,17 @@ I have multiple algorithm's located in my [JsonCocktailReposity](https://github.
 
 ## Unit test at least one class
 
-My unit testing is located in the [CocktailControllerTests](https://github.com/Lorriu/java-api-assessment/blob/main/src/test/java/com/cbfacademy/apiassessment/CocktailControllerTests.java). In this class I tested:
+I created two unit test classes. The first test [CocktailRepositoryTest]() included:
 
-1. The response when calling the endpoint to get all cocktails
+1. A test to search the cocktails by Price
+1. A test to check the random cocktail method selected a random cocktail.
+1. A test to check the when searching cocktail by name the correct cocktail was selected 
+
+The other is located in the [CocktailControllerTests](https://github.com/Lorriu/java-api-assessment/blob/main/src/test/java/com/cbfacademy/apiassessment/CocktailControllerTests.java). In this class I tested:
+
 1. The response when calling the endpoint to get a specific cocktail by ID
-1. The response when searching for a cocktail by price
-1. The response when searching cocktail by name
+1. The response when calling the endpoint to create a new cocktail
+1. The response when calling the endpoint to update a existing cocktail
 
 
 ## Store the data in a JSON file 
