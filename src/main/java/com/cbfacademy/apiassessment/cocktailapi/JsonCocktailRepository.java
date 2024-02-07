@@ -20,23 +20,30 @@ import org.springframework.stereotype.Repository;
 public class JsonCocktailRepository implements CocktailRepository {
 
     //File path for storing cocktail data in JSON
-    private final String filePath;
+    private String filePath;
     //ObjectMapper for JSON serialization/deserialization
-    private final ObjectMapper objectMapper;
+    private ObjectMapper objectMapper;
     //List to hold cocktails in memory
-    private final List<Cocktail> cocktails;
+    private List<Cocktail> cocktails;
+
 
 
     //Constructor to initialize the repository with file path and load data from JSON
-    public JsonCocktailRepository(@Value("${cocktailsList.json}") String filePath) {
+    public JsonCocktailRepository(ObjectMapper objectMapper) {
+
+        this.objectMapper = objectMapper;
+        this.objectMapper.registerModule(new JavaTimeModule());
+        this.cocktails = new ArrayList<>();
+    }
+
+    //set file path
+    public void setFilePath(@Value("${cocktailsList.json}") String filePath){
 
         validateFilePath(filePath); // Validate the file path
         this.filePath = filePath;
-        objectMapper = new ObjectMapper();
-        objectMapper.registerModule(new JavaTimeModule());
-        cocktails = loadDataFromJson();
+        this.cocktails = loadDataFromJson();
     }
-
+    
     //Validate the file path
     private void validateFilePath(String filePath) {
 
@@ -55,8 +62,8 @@ public class JsonCocktailRepository implements CocktailRepository {
 
             //Read JSON file and convert to List<Cocktail>
             if (file.exists()) {
-                return objectMapper.readValue(file, new TypeReference<List<Cocktail>>() {
-                });
+
+                return objectMapper.readValue(file, new TypeReference<List<Cocktail>>() {});
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -219,6 +226,16 @@ public class JsonCocktailRepository implements CocktailRepository {
             .filter(cocktail -> cocktail.getPrice() == price)
             //Collect the matching cocktails into a new list
             .collect(Collectors.toList());
+
+    }
+
+    // Method to manually load data for testing
+    public void loadDataForTesting(List<Cocktail> testCocktails) {
+
+        // Clear existing data
+        this.cocktails.clear();
+        // Add test data
+        this.cocktails.addAll(testCocktails);
 
     }
 

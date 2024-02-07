@@ -22,19 +22,11 @@ I have multiple algorithm's located in my [JsonCocktailReposity](https://github.
 
 ## Unit test at least one class
 
-I created two unit test classes. The first test [CocktailRepositoryTest]() included:
+I created a unit test to test the repository class [CocktailRepositoryTest]() In this class I tested:
 
 1. A test to search the cocktails by Price
 1. A test to check the random cocktail method selected a random cocktail.
 1. A test to check the when searching cocktail by name the correct cocktail was selected 
-
-The other is located in the [CocktailControllerTests](https://github.com/Lorriu/java-api-assessment/blob/main/src/test/java/com/cbfacademy/apiassessment/CocktailControllerTests.java). In this class I tested:
-
-1. The response when calling the endpoint to get a specific cocktail by ID
-1. The response when calling the endpoint to create a new cocktail
-1. The response when calling the endpoint to update a existing cocktail
-
-
 
 ## Store the data in a JSON file 
 
