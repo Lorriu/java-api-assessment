@@ -1,5 +1,9 @@
 # **Cocktail API**
 
+<div style="text-align:center;">
+  <img width="600" height="200" alt="Cocktail sign" src="https://unsplash.com/photos/a-neon-sign-that-reads-cocktails-in-a-dark-room-tnYF8AuOO8k"> 
+</div>
+
 ## **Introduction**
 
 I was tasked with creating an API that includes:
@@ -12,6 +16,11 @@ I was tasked with creating an API that includes:
 1. Good use of HTTP Protocols - methods, request and response, have full CRUD operations supported 
 1. Documentation
 
+<div style="text-align:center;">
+  <img width="647" height="400" alt="Variety of Cocktails" src="https://unsplash.com/photos/clear-cocktail-glass-with-pink-liquid-inside-QYWYnzvPTAQ">
+</div>
+
+
 I decided to create a Cocktail API, that can be used to read, add, update and delete a list of cocktails. There are multiple use cases this API can be used for including a cocktail recipe app/website, a cocktail ordering system, that could be used by resturants or bars, it can be an add on feature to a menu or used for inventory or teaching bartenders. 
 
 I will decribe how each item was included in the project below:
@@ -22,7 +31,7 @@ I have multiple algorithm's located in my [JsonCocktailReposity](https://github.
 
 ## Unit test at least one class
 
-I created a unit test to test the repository class [CocktailRepositoryTest]() In this class I tested:
+I created a unit test to test the repository class [CocktailRepositoryTest](https://github.com/Lorriu/java-api-assessment/blob/main/src/test/java/com/cbfacademy/apiassessment/CocktailRepositoryTest.java) In this class I tested:
 
 1. A test to search the cocktails by Price
 1. A test to check the random cocktail method selected a random cocktail.

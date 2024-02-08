@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.UUID;
 
 import com.cbfacademy.apiassessment.cocktailapi.Cocktail;
 import com.cbfacademy.apiassessment.cocktailapi.JsonCocktailRepository;

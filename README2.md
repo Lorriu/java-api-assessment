@@ -23,7 +23,7 @@ I have multiple algorithm's located in my [JsonCocktailReposity](https://github.
 
 ## Unit test at least one class
 
-I created a unit test to test the repository class [CocktailRepositoryTest]() In this class I tested:
+I created a unit test to test the repository class [CocktailRepositoryTest](https://github.com/Lorriu/java-api-assessment/blob/main/src/test/java/com/cbfacademy/apiassessment/CocktailRepositoryTest.java) In this class I tested:
 
 1. A test to search the cocktails by Price
 1. A test to check the random cocktail method selected a random cocktail.
