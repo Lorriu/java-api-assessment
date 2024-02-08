@@ -1,7 +1,7 @@
 # **Cocktail API**
 
 <div style="text-align:center;">
-  <img width="600" height="200" alt="Cocktail sign" src="https://unsplash.com/photos/a-neon-sign-that-reads-cocktails-in-a-dark-room-tnYF8AuOO8k"> 
+  <img width="600" height="350" alt="Cocktail sign" src="https://plus.unsplash.com/premium_photo-1673512328046-2f773b25c104?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
 </div>
 
 ## **Introduction**
@@ -17,7 +17,7 @@ I was tasked with creating an API that includes:
 1. Documentation
 
 <div style="text-align:center;">
-  <img width="647" height="400" alt="Variety of Cocktails" src="https://unsplash.com/photos/clear-cocktail-glass-with-pink-liquid-inside-QYWYnzvPTAQ">
+  <img width="700" height="350" alt="Variety of Cocktails" src="https://images.unsplash.com/photo-1605270012917-bf157c5a9541?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
 </div>
 
 
@@ -39,7 +39,13 @@ I created a unit test to test the repository class [CocktailRepositoryTest](http
 
 ## Store the data in a JSON file 
 
-The data is stored in a JSON file named [cocktailslist](https://github.com/Lorriu/java-api-assessment/blob/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi/cocktailsList.json)
+The data is stored in a JSON file named [cocktailsList](https://github.com/Lorriu/java-api-assessment/blob/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi/cocktailsList.json)
+
+<div style="text-align:center;">
+  <img width="700" height="700" alt="Cocktails Menu" src="https://nordicpostercollective.se/cdn/shop/products/classic-cocktails-1_1024x1024.jpg?v=1577634600">
+</div>
+
+
 
 ## Exception handling
 
@@ -81,7 +87,9 @@ A representative HTTP response will look something like this:
         "price": 14.00
 }
 ```
-
+<div style="text-align:center;">
+  <img width="600" height="300" alt="Cocktail sign" src="https://plus.unsplash.com/premium_photo-1674837818413-bc14a2c5d6e1?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+</div>
 
 ## If you would like to collaborate on this project here are the steps to get started:
 
