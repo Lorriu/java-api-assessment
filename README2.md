@@ -18,7 +18,7 @@ I was tasked with creating an API that includes:
 1. Documentation
 
 <div style="margin: 0 auto; display: block;">
-  <img width="800" height="350" alt="Variety of Cocktails" src="https://images.unsplash.com/photo-1605270012917-bf157c5a9541?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+  <img width="800" height="420" alt="Variety of Cocktails" src="https://images.unsplash.com/photo-1605270012917-bf157c5a9541?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
 </div>
 
 I decided to create a Cocktail API, that can be used to read, add, update and delete a list of cocktails. There are multiple use cases this API can be used for including a cocktail recipe app/website, a cocktail ordering system, that could be used by resturants or bars, it can be an add on feature to a menu or used for inventory or teaching bartenders. 
