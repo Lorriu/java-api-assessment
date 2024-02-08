@@ -19,7 +19,7 @@ I was tasked with creating an API that includes:
 <br>
 
 <div style="margin: 0 auto; display: block;">
-  <img width="900" height="350" alt="Variety of Cocktails" src="https://images.unsplash.com/photo-1605270012917-bf157c5a9541?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+  <img width="800" height="350" alt="Variety of Cocktails" src="https://images.unsplash.com/photo-1605270012917-bf157c5a9541?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
 </div>
 
 <br>
@@ -91,7 +91,7 @@ A representative HTTP response will look something like this:
 }
 ```
 <div style="margin: 0 auto; display: block;">
-  <img width="800" height="300" alt="Cocktail sign" src="https://plus.unsplash.com/premium_photo-1674837818413-bc14a2c5d6e1?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+  <img width="600" height="300" alt="Cocktail sign" src="https://plus.unsplash.com/premium_photo-1674837818413-bc14a2c5d6e1?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
 </div>
 
 ## If you would like to collaborate on this project here are the steps to get started:
