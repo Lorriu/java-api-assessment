@@ -14,10 +14,10 @@ import com.cbfacademy.apiassessment.cocktailapi.core.PersistenceException;
 @Service
 public class ListCocktailService implements CocktailService {
 
-    private final CocktailRepository cocktailRepository;
+    private final JsonCocktailRepository cocktailRepository;
 
     @Autowired
-    public ListCocktailService(CocktailRepository cocktailRepository) {
+    public ListCocktailService(JsonCocktailRepository cocktailRepository) {
         this.cocktailRepository = cocktailRepository;
     }
 
@@ -38,6 +38,23 @@ public class ListCocktailService implements CocktailService {
 
         try {
             return cocktailRepository.retrieve(id);
+        } catch (IllegalArgumentException e) {
+            // Handle exception or return null if not found
+            e.getMessage();
+            return null;
+        } catch (Exception e) {
+            // Handle other exceptions
+            e.getMessage();
+            return null;
+        }
+       
+    }
+
+    @Override
+    public Cocktail getCocktail(String name) {
+
+        try {
+            return cocktailRepository.retrieveByName(name);
         } catch (IllegalArgumentException e) {
             // Handle exception or return null if not found
             e.getMessage();
@@ -88,6 +105,7 @@ public class ListCocktailService implements CocktailService {
             }
         }
     }
+
 }
 
 

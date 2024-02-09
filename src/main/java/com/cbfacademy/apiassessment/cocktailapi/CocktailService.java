@@ -22,6 +22,14 @@ public interface CocktailService {
     Cocktail getCocktail(UUID id);
 
     /**
+     * Retrieve an Cocktail by its name
+     *
+     * @param name The ID of the Cocktail to retrieve.
+     * @return The Cocktail with the specified name, or null if not found.
+     */
+    Cocktail getCocktail(String name);
+
+    /**
      * Create a new Cocktail.
      *
      * @param cocktail The Cocktail object to create.

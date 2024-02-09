@@ -2,10 +2,14 @@ package com.cbfacademy.apiassessment;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Value;
+
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.List;
+
 
 import com.cbfacademy.apiassessment.cocktailapi.Cocktail;
 import com.cbfacademy.apiassessment.cocktailapi.JsonCocktailRepository;
@@ -14,6 +18,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class CocktailRepositoryTest {
 
     private JsonCocktailRepository cocktailRepository;
+
+    private List<Cocktail> cocktails;
+
 
     @BeforeEach
     public void setUp() {
@@ -68,4 +75,44 @@ public class CocktailRepositoryTest {
         assertEquals(1, results.size());
         assertEquals("Gin and Tonic", results.get(0).getName());
     }
+
+
+    //test to set file path
+    @Test
+    void testSetFilePath(){
+
+
+        // Path file = new File("cocktailsList.json").toPath();
+
+        // boolean exists = Files.exists(file);
+
+        // assertEquals(true, exists);
+
+        File file = new File("/Users/lorraineugen/Documents/JavaCourse/java-api-assessment/src/main/java/com/cbfacademy/apiassessment/cocktailapi/cocktailsList.json");
+
+        boolean exists = file.exists();      // Check if the file exists
+
+        assertEquals(true, exists);
+        //assertTrue(file.exists());
+    }
+    
+
+    @Test
+    void testLoadDataFromJson() {
+
+        List<Cocktail> results = cocktailRepository.loadDataFromJson();
+        assertNotNull(results);
+        assertEquals(true, results.toString().contains("Mojito"));
+        assertEquals(13, results.size());
+        assertEquals("Mojito", results.get(2).getName());
+
+        //Testing to see if the exception was creating the empty array by filing the array
+
+        //assertEquals(1, results.size());
+        //assertEquals(true, results.toString().contains("sussie"));
+        
+        
+    }
+
+
 }

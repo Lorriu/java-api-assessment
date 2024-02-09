@@ -60,7 +60,7 @@ public class CocktailController {
     // Handling HTTP GET request to retrieve a specific Cocktail by its ID
     @GetMapping("/{id}")
     // Extracting the ID from the URI path and passing it as a method parameter
-    public ResponseEntity<Cocktail> getCocktail(@PathVariable("id") UUID id) {
+    public ResponseEntity<?> getCocktail(@PathVariable("id") UUID id) {
         
         try {
 
@@ -70,13 +70,34 @@ public class CocktailController {
         } catch (CocktailNotFoundException e) {
 
             e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiErrorResponse("Cocktail not found"));
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
        
     }
+
+     // Handling HTTP GET request to retrieve a specific Cocktail by its ID
+     @GetMapping("/{name}")
+     // Extracting the ID from the URI path and passing it as a method parameter
+     public ResponseEntity<?> getCocktailByName(@PathVariable("name") String name) {
+         
+         try {
+ 
+             Cocktail cocktail = cocktailService.getCocktail(name);
+             return ResponseEntity.ok().body(cocktail);
+ 
+         } catch (CocktailNotFoundException e) {
+ 
+             e.printStackTrace();
+             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiErrorResponse("Cocktail not found"));
+         } catch (Exception e) {
+             e.printStackTrace();
+             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+         }
+        
+     }
 
     // Handling HTTP POST request to add a new Cocktail
     @PostMapping

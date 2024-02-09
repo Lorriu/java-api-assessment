@@ -20,7 +20,7 @@ import org.springframework.stereotype.Repository;
 public class JsonCocktailRepository implements CocktailRepository {
 
     //File path for storing cocktail data in JSON
-    private String filePath;
+    private String filePath = "/Users/lorraineugen/Documents/JavaCourse/java-api-assessment/src/main/java/com/cbfacademy/apiassessment/cocktailapi/cocktailsList.json";
     //ObjectMapper for JSON serialization/deserialization
     private ObjectMapper objectMapper;
     //List to hold cocktails in memory
@@ -33,44 +33,64 @@ public class JsonCocktailRepository implements CocktailRepository {
 
         this.objectMapper = objectMapper;
         this.objectMapper.registerModule(new JavaTimeModule());
-        this.cocktails = new ArrayList<>();
+        //this.cocktails = new ArrayList<>();
+        cocktails = loadDataFromJson();
+
     }
 
     //set file path
-    public void setFilePath(@Value("${cocktailsList.json}") String filePath){
+    // public void setFilePath( String filePath){
 
-        validateFilePath(filePath); // Validate the file path
-        this.filePath = filePath;
-        this.cocktails = loadDataFromJson();
-    }
+    //     // validateFilePath(filePath); // Validate the file path
+    //     this.filePath = filePath;
+    //     this.cocktails = loadDataFromJson();
+    // }
+    // //set file path
+    // public void setFilePath(@Value("${cocktailsList.json}") String filePath){
+
+    //     validateFilePath(filePath); // Validate the file path
+    //     this.filePath = filePath;
+    //     this.cocktails = loadDataFromJson();
+    // }
     
     //Validate the file path
-    private void validateFilePath(String filePath) {
+    // private void validateFilePath() {
 
-        File file = new File(filePath);
+    //     File file = new File(filePath);
+        
 
-        if (!file.exists() || !file.isFile()) {
+    //     if (!file.exists() || !file.isFile()) {
             
-            throw new IllegalArgumentException("Invalid file path: " + filePath);
-        }
-    }
+    //         throw new IllegalArgumentException("Invalid file path: " + filePath);
+    //     }
+    // }
 
     //Load cocktail data from JSON file into the in-memory list
-    private List<Cocktail> loadDataFromJson() {
+    public List<Cocktail> loadDataFromJson() {
         try {
             File file = new File(filePath);
 
             //Read JSON file and convert to List<Cocktail>
             if (file.exists()) {
 
-                return objectMapper.readValue(file, new TypeReference<List<Cocktail>>() {});
+                //return List<Cocktail>.class;
+            //eturn objectMapper.readValue(file, new ArrayList<Cocktail>());
+
+            // the file exisits, read the values from file and change to List of Cocktails and assign
+            return objectMapper.readValue(file, new TypeReference <List<Cocktail>>() {});
+
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        //Return an empty list if data loading fails
+        //DEBUGGING TEST Return list of data objectMapper loading fails (concluded the objectMapper was failing)
+        //return new ArrayList<>();
+        //ArrayList testList = new ArrayList<>();
+        //testList.add("sussie");
+
         return new ArrayList<>();
+        
     }
 
 
@@ -118,6 +138,28 @@ public class JsonCocktailRepository implements CocktailRepository {
             return foundCocktail.get();
         } else {
             throw new PersistenceException("Cocktail with ID " + id + " not found for retrieval.");
+        }
+
+    }
+
+    @Override
+    //Retrieve a cocktail by its unique identifier
+    public Cocktail retrieveByName(String name) throws IllegalArgumentException, PersistenceException {
+        // Check if the provided ID is null
+        if (name == null) {
+            throw new IllegalArgumentException("Name cannot be null for cocktail retrieval.");
+        }
+
+        // Use stream and filter to find the cocktail with the specified ID
+        Optional<Cocktail> foundCocktail = cocktails.stream()
+            .filter(cocktail -> cocktail.getName().equals(name))
+            .findFirst();
+
+        // If a cocktail with the specified ID is found, return it; otherwise, throw PersistenceException
+        if (foundCocktail.isPresent()) {
+            return foundCocktail.get();
+        } else {
+            throw new PersistenceException("Cocktail with name " + name + " not found for retrieval.");
         }
 
     }

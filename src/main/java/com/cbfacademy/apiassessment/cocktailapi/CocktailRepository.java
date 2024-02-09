@@ -3,6 +3,7 @@ package com.cbfacademy.apiassessment.cocktailapi;
 import java.util.List;
 import java.util.UUID;
 
+import com.cbfacademy.apiassessment.cocktailapi.core.PersistenceException;
 import com.cbfacademy.apiassessment.cocktailapi.core.Repository;
 
 public interface CocktailRepository extends Repository<Cocktail, UUID> {
@@ -42,7 +43,13 @@ public interface CocktailRepository extends Repository<Cocktail, UUID> {
      */
     List<Cocktail> searchByPrice(double price);
 
-
+  /**
+     * Retrieve an Cocktail by its name
+     *
+     * @param name The ID of the Cocktail to retrieve.
+     * @return The Cocktail with the specified name, or null if not found.
+     */
+    public Cocktail retrieveByName(String name) throws IllegalArgumentException, PersistenceException;
     
 
 }
