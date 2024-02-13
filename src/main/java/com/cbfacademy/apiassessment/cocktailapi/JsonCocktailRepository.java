@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -20,7 +21,7 @@ import org.springframework.stereotype.Repository;
 public class JsonCocktailRepository implements CocktailRepository {
 
     //File path for storing cocktail data in JSON
-    private String filePath = "/Users/lorraineugen/Documents/JavaCourse/java-api-assessment/src/main/java/com/cbfacademy/apiassessment/cocktailapi/cocktailsList.json";
+    private String filePath;
     //ObjectMapper for JSON serialization/deserialization
     private ObjectMapper objectMapper;
     //List to hold cocktails in memory
@@ -33,37 +34,36 @@ public class JsonCocktailRepository implements CocktailRepository {
 
         this.objectMapper = objectMapper;
         this.objectMapper.registerModule(new JavaTimeModule());
-        //this.cocktails = new ArrayList<>();
-        cocktails = loadDataFromJson();
+        this.cocktails = new ArrayList<>();
+        //cocktails = loadDataFromJson();
 
     }
 
+   
     //set file path
-    // public void setFilePath( String filePath){
+    public void setFilePath(@Value("${cocktailsList.json}") String filePath){
 
-    //     // validateFilePath(filePath); // Validate the file path
-    //     this.filePath = filePath;
-    //     this.cocktails = loadDataFromJson();
-    // }
-    // //set file path
-    // public void setFilePath(@Value("${cocktailsList.json}") String filePath){
+        validateFilePath(filePath); // Validate the file path
+        this.filePath = filePath;
+        this.cocktails = loadDataFromJson();
+    }
 
-    //     validateFilePath(filePath); // Validate the file path
-    //     this.filePath = filePath;
-    //     this.cocktails = loadDataFromJson();
-    // }
+    //get file path
+    public String getFilePath() {
+        return filePath;
+    }
     
-    //Validate the file path
-    // private void validateFilePath() {
+    // Validate the file path
+    private void validateFilePath(String filePath) {
 
-    //     File file = new File(filePath);
+        File file = new File(filePath);
         
 
-    //     if (!file.exists() || !file.isFile()) {
+        if (!file.exists() || !file.isFile()) {
             
-    //         throw new IllegalArgumentException("Invalid file path: " + filePath);
-    //     }
-    // }
+            throw new IllegalArgumentException("Invalid file path: " + filePath);
+        }
+    }
 
     //Load cocktail data from JSON file into the in-memory list
     public List<Cocktail> loadDataFromJson() {
@@ -71,15 +71,15 @@ public class JsonCocktailRepository implements CocktailRepository {
             File file = new File(filePath);
 
             //Read JSON file and convert to List<Cocktail>
-            if (file.exists()) {
-
+            if (!file.exists()) {
+                    throw new FileNotFoundException("File not found: " + filePath);
+            }
                 //return List<Cocktail>.class;
             //eturn objectMapper.readValue(file, new ArrayList<Cocktail>());
 
-            // the file exisits, read the values from file and change to List of Cocktails and assign
+            //If the file exisits, read the values from file and change to List of Cocktails and assign
             return objectMapper.readValue(file, new TypeReference <List<Cocktail>>() {});
 
-            }
         } catch (IOException e) {
             e.printStackTrace();
         }

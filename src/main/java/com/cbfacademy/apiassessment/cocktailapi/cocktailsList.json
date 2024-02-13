@@ -1,5 +1,5 @@
-{
-    "cocktailsList": [
+
+     [
       {
         "name": "Margarita",
         "ingredients": [
@@ -7,8 +7,8 @@
           "1 oz Fresh Lime Juice",
           "0.75 oz Triple Sec"
         ],
-        "fresh_fruit": true,
-        "alcohol_strength": "Medium",
+        "freshFruit": true,
+        "alcoholStrength": "Medium",
         "details": "Serve on the rocks with a salted rim.",
         "price": 14.00
       },
@@ -18,8 +18,8 @@
           "2.5 oz Gin or Vodka",
           "0.5 oz Dry Vermouth"
         ],
-        "fresh_fruit": false,
-        "alcohol_strength": "High",
+        "freshFruit": false,
+        "alcoholStrength": "High",
         "details": "Stirred or shaken and served in a chilled glass.",
         "price": 15.00
       },
@@ -32,8 +32,8 @@
           "Mint Leaves",
           "Club Soda"
         ],
-        "fresh_fruit": true,
-        "alcohol_strength": "Medium",
+        "freshFruit": true,
+        "alcoholStrength": "Medium",
         "details": "Muddle mint and sugar, add rum, lime juice, ice, and top with club soda.",
         "price": 14.00
       },
@@ -46,8 +46,8 @@
           "1 tsp Simple Syrup",
           "Lychee Fruit (for garnish)"
         ],
-        "fresh_fruit": true,
-        "alcohol_strength": "Medium",
+        "freshFruit": true,
+        "alcoholStrength": "Medium",
         "details": "Shake with ice and strain into a chilled martini glass. Garnish with a lychee fruit.",
         "price": 15.00
       },
@@ -61,8 +61,8 @@
           "0.5 oz Simple Syrup",
           "Champagne (on the side)"
         ],
-        "fresh_fruit": true,
-        "alcohol_strength": "Medium",
+        "freshFruit": true,
+        "alcoholStrength": "Medium",
         "details": "Shake all ingredients (except Champagne) with ice. Strain into a glass and serve with a shot of Champagne on the side.",
         "price": 15.00
       },
@@ -74,8 +74,8 @@
           "1 Sugar Cube",
           "Splash of Water"
         ],
-        "fresh_fruit": false,
-        "alcohol_strength": "High",
+        "freshFruit": false,
+        "alcoholStrength": "High",
         "details": "Muddle sugar and bitters, add whiskey and ice, stir, and garnish with an orange twist.",
         "price": 15.00
       },
@@ -86,8 +86,8 @@
           "1 oz Fresh Lime Juice",
           "0.5 oz Simple Syrup"
         ],
-        "fresh_fruit": true,
-        "alcohol_strength": "Medium",
+        "freshFruit": true,
+        "alcoholStrength": "Medium",
         "details": "Shake with ice and strain into a chilled glass.",
         "price": 13.00
       },
@@ -98,8 +98,8 @@
           "1 oz Campari",
           "1 oz Sweet Vermouth"
         ],
-        "fresh_fruit": false,
-        "alcohol_strength": "Medium",
+        "freshFruit": false,
+        "alcoholStrength": "Medium",
         "details": "Stir with ice and strain into a rocks glass over ice, garnish with an orange twist.",
         "price": 14.00
       },
@@ -111,8 +111,8 @@
           "1 oz Coconut Cream",
           "Pineapple Slice (for garnish)"
         ],
-        "fresh_fruit": true,
-        "alcohol_strength": "Medium",
+        "freshFruit": true,
+        "alcoholStrength": "Medium",
         "details": "Blend with crushed ice until smooth, serve in a chilled glass, and garnish with a pineapple slice.",
         "price": 14.00
       },
@@ -123,8 +123,8 @@
           "0.5 oz Fresh Lime Juice",
           "4 oz Ginger Beer"
         ],
-        "fresh_fruit": true,
-        "alcohol_strength": "Medium",
+        "freshDruit": true,
+        "alcoholStrength": "Medium",
         "details": "Build over ice in a copper mug, stir gently, and garnish with a lime wedge.",
         "price": 15.00
       },
@@ -135,8 +135,8 @@
           "1 oz Sweet Vermouth",
           "2 dashes Angostura Bitters"
         ],
-        "fresh_fruit": false,
-        "alcohol_strength": "High",
+        "freshFruit": false,
+        "alcoholStrength": "High",
         "details": "Stir with ice, strain into a chilled cocktail glass, and garnish with a cherry.",
         "price": 15.00
       },
@@ -147,8 +147,8 @@
           "0.75 oz Fresh Lemon Juice",
           "0.5 oz Simple Syrup"
         ],
-        "fresh_fruit": true,
-        "alcohol_strength": "Medium",
+        "freshFruit": true,
+        "alcoholStrength": "Medium",
         "details": "Shake with ice, strain into a rocks glass over ice, and garnish with a cherry and an orange slice.",
         "price": 15.00
       }, 
@@ -160,12 +160,12 @@
           "1 oz Soda Water",
           "Orange Slice (for garnish)"
         ],
-        "fresh_fruit": true,
-        "alcohol_strength": "Low",
+        "freshFruit": true,
+        "alcoholStrength": "Low",
         "details": "Build over ice in a wine glass, stir gently, and garnish with an orange slice.",
         "price": 12.00
       }
     
     ]
-  }
+  
   

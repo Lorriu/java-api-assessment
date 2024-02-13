@@ -2,11 +2,8 @@ package com.cbfacademy.apiassessment;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Value;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,8 +15,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class CocktailRepositoryTest {
 
     private JsonCocktailRepository cocktailRepository;
-
-    private List<Cocktail> cocktails;
 
 
     @BeforeEach
@@ -81,21 +76,15 @@ public class CocktailRepositoryTest {
     @Test
     void testSetFilePath(){
 
+        //checks if the method executes without throwing a checked exception
+        assertDoesNotThrow(() -> {
+        cocktailRepository.setFilePath("${cocktailsList.json}");
+        });
 
-        // Path file = new File("cocktailsList.json").toPath();
+        //checj the filePath is correctly set
+        assertEquals("${cocktailsList.json}", cocktailRepository.getFilePath());
 
-        // boolean exists = Files.exists(file);
-
-        // assertEquals(true, exists);
-
-        File file = new File("/Users/lorraineugen/Documents/JavaCourse/java-api-assessment/src/main/java/com/cbfacademy/apiassessment/cocktailapi/cocktailsList.json");
-
-        boolean exists = file.exists();      // Check if the file exists
-
-        assertEquals(true, exists);
-        //assertTrue(file.exists());
     }
-    
 
     @Test
     void testLoadDataFromJson() {
@@ -106,7 +95,7 @@ public class CocktailRepositoryTest {
         assertEquals(13, results.size());
         assertEquals("Mojito", results.get(2).getName());
 
-        //Testing to see if the exception was creating the empty array by filing the array
+        //Test below was to see if the exception was creating the empty array by filing the array
 
         //assertEquals(1, results.size());
         //assertEquals(true, results.toString().contains("sussie"));
