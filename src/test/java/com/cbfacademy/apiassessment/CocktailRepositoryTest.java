@@ -78,11 +78,11 @@ public class CocktailRepositoryTest {
 
         //checks if the method executes without throwing a checked exception
         assertDoesNotThrow(() -> {
-        cocktailRepository.setFilePath("${cocktailsList.json}");
+        cocktailRepository.setFilePath("cocktailsList.json");
         });
 
         //checj the filePath is correctly set
-        assertEquals("${cocktailsList.json}", cocktailRepository.getFilePath());
+        assertEquals("cocktailsList.json", cocktailRepository.getFilePath());
 
     }
 

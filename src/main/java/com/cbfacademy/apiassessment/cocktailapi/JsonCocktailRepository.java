@@ -41,7 +41,7 @@ public class JsonCocktailRepository implements CocktailRepository {
 
    
     //set file path
-    public void setFilePath(@Value("${cocktailsList.json}") String filePath){
+    public void setFilePath(String filePath){
 
         validateFilePath(filePath); // Validate the file path
         this.filePath = filePath;
