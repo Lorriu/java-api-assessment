@@ -27,8 +27,6 @@ I was tasked with creating an API that includes:
 
 I decided to create a Cocktail API, that can be used to read, add, update and delete a list of cocktails. There are multiple use cases this API can be used for including a cocktail recipe app/website, a cocktail ordering system, that could be used by resturants or bars, it can be an add on feature to a menu or used for inventory or teaching bartenders. 
 
-[UseCase Image](UseCases.png)
-
 I will decribe how each item was included in the project below:
 
 ## At least one algoritm
