@@ -65,10 +65,11 @@ In the [CocktailController](https://github.com/Lorriu/java-api-assessment/blob/m
 | Method   | URL              | Description          |
 | -------- | ---------------- | -------------------- |
 | `GET`    | `/api/cocktails`      | Get all Cocktails         |
+| `GET`    | `/api/cocktails/{id}` | Get a Cocktail by id     |
 | `GET`    | `/api/cocktails/{name}` | Get a Cocktail by name     |
 | `POST`   | `/api/cocktails`      | Add a Cocktail          |
-| `PUT`    | `/api/cocktails/{id}` | Replace a Cocktail by id |
-| `DELETE` | `/api/cocktails/{id}` | Delete a Cocktail by id  |
+| `PUT`    | `/api/cocktails/{name}` | Replace a Cocktail by id |
+| `DELETE` | `/api/cocktails/{name}` | Delete a Cocktail by id  |
 
 
 The [ListCocktailService](https://github.com/Lorriu/java-api-assessment/blob/main/src/main/java/com/cbfacademy/apiassessment/cocktailapi/ListCocktailService.java) has the full methods to perform CRUD operations. 

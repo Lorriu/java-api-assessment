@@ -125,7 +125,7 @@ public class CocktailController {
     }
 
     // Handling HTTP PUT request to update an existing Cocktail by its ID
-    @PutMapping("/{id}")
+    @PutMapping("/{name}")
     // Extracting the ID from the URI path and updating the corresponding Cocktail
     public ResponseEntity<?> updateCocktail(@PathVariable String name, @RequestBody Cocktail updatedCocktail) {
         
@@ -149,7 +149,7 @@ public class CocktailController {
                
 
     // Handling HTTP DELETE request to delete a Cocktail by its ID
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{name}")
     // Extracting the ID from the URI path and deleting the corresponding Cocktail
     public ResponseEntity<?> deleteCocktail(@PathVariable String name) {
 
