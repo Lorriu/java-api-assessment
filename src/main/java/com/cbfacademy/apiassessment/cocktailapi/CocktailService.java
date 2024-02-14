@@ -24,7 +24,7 @@ public interface CocktailService {
     /**
      * Retrieve an Cocktail by its name
      *
-     * @param name The ID of the Cocktail to retrieve.
+     * @param name The name of the Cocktail to retrieve.
      * @return The Cocktail with the specified name, or null if not found.
      */
     Cocktail getCocktail(String name);
@@ -38,11 +38,11 @@ public interface CocktailService {
     Cocktail createCocktail(Cocktail cocktail);
 
     /**
-     * Update an existing Cocktail by its ID.
+     * Update an existing Cocktail by its name.
      *
-     * @param name         The ID of the Cocktail to update.
+     * @param name         The name of the Cocktail to update.
      * @param updatedCocktail The updated Cocktail object.
-     * @return The updated Cocktail, or null if the ID is not found.
+     * @return The updated Cocktail, or null if the name is not found.
      */
     Cocktail updateCocktail(String name, Cocktail updatedCocktail);
 
