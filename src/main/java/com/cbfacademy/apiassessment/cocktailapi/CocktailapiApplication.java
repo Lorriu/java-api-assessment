@@ -15,7 +15,7 @@ public class CocktailapiApplication {
         JsonCocktailRepository jsonCocktailRepository = context.getBean(JsonCocktailRepository.class);
 
         // Set the file path
-        jsonCocktailRepository.setFilePath("cocktailsList.json");
+        jsonCocktailRepository.setFilePath("./src/main/java/com/cbfacademy/apiassessment/cocktailapi/cocktailsList.json");
 
 
 	}

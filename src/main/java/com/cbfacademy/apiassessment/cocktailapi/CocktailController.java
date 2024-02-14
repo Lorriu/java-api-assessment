@@ -127,13 +127,13 @@ public class CocktailController {
     // Handling HTTP PUT request to update an existing Cocktail by its ID
     @PutMapping("/{id}")
     // Extracting the ID from the URI path and updating the corresponding Cocktail
-    public ResponseEntity<?> updateCocktail(@PathVariable UUID id, @RequestBody Cocktail updatedCocktail) {
+    public ResponseEntity<?> updateCocktail(@PathVariable String name, @RequestBody Cocktail updatedCocktail) {
         
             try {
                 
-                updatedCocktail.setId(id); // Ensure the ID is set to the correct value
+                updatedCocktail.setName(name); // Ensure the ID is set to the correct value
                 
-                return new ResponseEntity<>(cocktailService.updateCocktail(id, updatedCocktail), HttpStatus.OK);
+                return new ResponseEntity<>(cocktailService.updateCocktail(name, updatedCocktail), HttpStatus.OK);
 
             } catch (CocktailNotFoundException e) {
 
@@ -151,10 +151,10 @@ public class CocktailController {
     // Handling HTTP DELETE request to delete a Cocktail by its ID
     @DeleteMapping("/{id}")
     // Extracting the ID from the URI path and deleting the corresponding Cocktail
-    public ResponseEntity<?> deleteCocktail(@PathVariable UUID id) {
+    public ResponseEntity<?> deleteCocktail(@PathVariable String name) {
 
     try {
-        cocktailService.deleteCocktail(id);
+        cocktailService.deleteCocktail(name);
 
         return ResponseEntity.noContent().build();
 

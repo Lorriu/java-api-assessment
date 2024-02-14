@@ -40,18 +40,18 @@ public interface CocktailService {
     /**
      * Update an existing Cocktail by its ID.
      *
-     * @param id         The ID of the Cocktail to update.
+     * @param name         The ID of the Cocktail to update.
      * @param updatedCocktail The updated Cocktail object.
      * @return The updated Cocktail, or null if the ID is not found.
      */
-    Cocktail updateCocktail(UUID id, Cocktail updatedCocktail);
+    Cocktail updateCocktail(String name, Cocktail updatedCocktail);
 
     /**
-     * Delete an Cocktail by its ID.
+     * Delete an Cocktail by its name.
      *
-     * @param id The ID of the Cocktail to delete.
+     * @param name The name of the Cocktail to delete.
      */
-    void deleteCocktail(UUID id);
+    void deleteCocktail(String name);
 
 }
     

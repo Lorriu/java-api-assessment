@@ -1,6 +1,7 @@
 
      [
       {
+        "id": "bd56a988-4784-4f9b-816b-e5bfe134d4eb",
         "name": "Margarita",
         "ingredients": [
           "2 oz Tequila",
@@ -13,6 +14,7 @@
         "price": 14.00
       },
       {
+        "id": "8fa1a485-1a4c-4050-9e51-cdc4b907439e",
         "name": "Martini",
         "ingredients": [
           "2.5 oz Gin or Vodka",
@@ -24,6 +26,7 @@
         "price": 15.00
       },
       {
+        "id": "7310ac79-d1fb-422a-89ed-24229fb347fc",
         "name": "Mojito",
         "ingredients": [
           "2 oz White Rum",
@@ -38,6 +41,7 @@
         "price": 14.00
       },
       {
+        "id": "554681a5-fca2-42aa-95a7-2c3d222e590d",
         "name": "Lychee Martini",
         "ingredients": [
           "2 oz Vodka",
@@ -52,6 +56,7 @@
         "price": 15.00
       },
       {
+        "id": "d1d61629-739f-4d5e-9ae6-90123c200282",
         "name": "Pornstar Martini",
         "ingredients": [
           "1.5 oz Vanilla Vodka",
@@ -67,6 +72,7 @@
         "price": 15.00
       },
       {
+        "id": "7bc333b6-3f07-4afc-96f5-0b22ee785c9f",
         "name": "Old Fashioned",
         "ingredients": [
           "2 oz Bourbon or Rye Whiskey",
@@ -80,6 +86,7 @@
         "price": 15.00
       },
       {
+        "id": "b5e3984d-33ba-4692-aacb-395ac83b3129",
         "name": "Daiquiri",
         "ingredients": [
           "2 oz White Rum",
@@ -92,6 +99,7 @@
         "price": 13.00
       },
       {
+        "id": "209eb3cf-fcce-451f-ade8-6b6bd2ee9405",
         "name": "Negroni",
         "ingredients": [
           "1 oz Gin",
@@ -104,6 +112,7 @@
         "price": 14.00
       },
       {
+        "id": "c1cd7d6f-d6f6-4ac9-9b6d-344ad7655713",
         "name": "Piña Colada",
         "ingredients": [
           "2 oz White Rum",
@@ -117,18 +126,20 @@
         "price": 14.00
       },
       {
+        "id": "871bdfc1-1109-4aac-b58e-ec7fcd89febf",
         "name": "Moscow Mule",
         "ingredients": [
           "2 oz Vodka",
           "0.5 oz Fresh Lime Juice",
           "4 oz Ginger Beer"
         ],
-        "freshDruit": true,
+        "freshFruit": true,
         "alcoholStrength": "Medium",
         "details": "Build over ice in a copper mug, stir gently, and garnish with a lime wedge.",
         "price": 15.00
       },
       {
+        "id": "58d7a8b1-d7f8-4f76-8b97-78d24ef99b1c",
         "name": "Manhattan",
         "ingredients": [
           "2 oz Rye Whiskey",
@@ -141,6 +152,7 @@
         "price": 15.00
       },
       {
+        "id": "70f96cbc-7f24-48e6-8712-955ef50e0224",
         "name": "Whiskey Sour",
         "ingredients": [
           "2 oz Bourbon or Rye Whiskey",
@@ -153,6 +165,7 @@
         "price": 15.00
       }, 
       {
+        "id": "1fc04bde-d72d-4f82-a44b-d2bff48a9c46",
         "name": "Aperol Spritz",
         "ingredients": [
           "2 oz Aperol",

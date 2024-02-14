@@ -81,7 +81,7 @@ public class ListCocktailService implements CocktailService {
     }
 
     @Override
-    public Cocktail updateCocktail(UUID id, Cocktail updatedCocktail) {
+    public Cocktail updateCocktail(String name, Cocktail updatedCocktail) {
 
         try {
             return cocktailRepository.update(updatedCocktail);
@@ -93,9 +93,9 @@ public class ListCocktailService implements CocktailService {
     }
 
     @Override
-    public void deleteCocktail(UUID id) {
+    public void deleteCocktail(String name) {
         
-        Cocktail cocktailToDelete = getCocktail(id);
+        Cocktail cocktailToDelete = getCocktail(name);
         if (cocktailToDelete != null) {
             try {
                 cocktailRepository.delete(cocktailToDelete);

@@ -65,9 +65,9 @@ In the [CocktailController](https://github.com/Lorriu/java-api-assessment/blob/m
 | Method   | URL              | Description          |
 | -------- | ---------------- | -------------------- |
 | `GET`    | `/api/cocktails`      | Get all Cocktails         |
-| `GET`    | `/api/cocktails/{id}` | Get a Cocktail by id     |
+| `GET`    | `/api/cocktails/{name}` | Get a Cocktail by name     |
 | `POST`   | `/api/cocktails`      | Add a Cocktail          |
-| `PUT`    | `/api/cocktails/{id}` | Replace a Cocktail by Id |
+| `PUT`    | `/api/cocktails/{id}` | Replace a Cocktail by id |
 | `DELETE` | `/api/cocktails/{id}` | Delete a Cocktail by id  |
 
 

@@ -18,7 +18,6 @@ public class Cocktail {
 
      // Constructor to initialize the list
         public Cocktail() {
-            this.id = UUID.randomUUID();
             this.ingredients = new ArrayList<>();
          }
 
@@ -31,10 +30,9 @@ public class Cocktail {
   
 
     //constructor with parameters
-        public Cocktail(String name, List<String> ingredients, boolean freshFruit, String alcoholStrength, String details, double price) {
+        public Cocktail(UUID id, String name, List<String> ingredients, boolean freshFruit, String alcoholStrength, String details, double price) {
 
-            //generate random UUID
-            this.id = UUID.randomUUID();
+            this.id = id;
             this.name = name;
             this.ingredients = ingredients;
             this.freshFruit = freshFruit;
@@ -106,7 +104,8 @@ public class Cocktail {
         //toString method to display details on cocktail
         @Override
         public String toString() {
-            return "Cocktail{ name: "+ name + 
+            return "Cocktail{ id: " + id +
+                    ", \nname: "+ name + 
                     ", \ningredients: "+ ingredients + 
                     ", \nfreshFruit: "+ freshFruit + 
                     ", \nalcoholStrength: "+ alcoholStrength + 

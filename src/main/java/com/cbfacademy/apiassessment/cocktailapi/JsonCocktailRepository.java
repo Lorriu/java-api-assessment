@@ -12,7 +12,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
@@ -67,27 +66,23 @@ public class JsonCocktailRepository implements CocktailRepository {
 
     //Load cocktail data from JSON file into the in-memory list
     public List<Cocktail> loadDataFromJson() {
+
         try {
+
             File file = new File(filePath);
 
-            //Read JSON file and convert to List<Cocktail>
+            //Read JSON file if it does not exist throw exception 
             if (!file.exists()) {
                     throw new FileNotFoundException("File not found: " + filePath);
             }
-                //return List<Cocktail>.class;
-            //eturn objectMapper.readValue(file, new ArrayList<Cocktail>());
 
-            //If the file exisits, read the values from file and change to List of Cocktails and assign
+            //If the file exisits, read the values from file and convert to List<Cocktail>
             return objectMapper.readValue(file, new TypeReference <List<Cocktail>>() {});
 
         } catch (IOException e) {
             e.printStackTrace();
+            e.getMessage();
         }
-
-        //DEBUGGING TEST Return list of data objectMapper loading fails (concluded the objectMapper was failing)
-        //return new ArrayList<>();
-        //ArrayList testList = new ArrayList<>();
-        //testList.add("sussie");
 
         return new ArrayList<>();
         
