@@ -39,6 +39,8 @@ I created a unit test to test the repository class [CocktailRepositoryTest](http
 1. A test to search the cocktails by Price
 1. A test to check the random cocktail method selected a random cocktail.
 1. A test to check the when searching cocktail by name the correct cocktail was selected 
+1. A test to check the file path was valid
+1. A test to check the data was being loaded from the JSON file
 
 ## Store the data in a JSON file 
 
