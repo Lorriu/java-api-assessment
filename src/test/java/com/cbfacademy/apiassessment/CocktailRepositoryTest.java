@@ -92,6 +92,7 @@ public class CocktailRepositoryTest {
     @Test
     void testLoadDataFromJson() {
 
+        //Set filepath to actual repository instead of using the @BeforeEach test repo
         assertDoesNotThrow(() -> {
         cocktailRepository.setFilePath("./src/main/java/com/cbfacademy/apiassessment/cocktailapi/cocktailsList.json");
         });
